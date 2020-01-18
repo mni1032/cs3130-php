@@ -10,9 +10,17 @@
 <body>
   <?php include "header.php";?>
   <div id="landingMenu" class="flex">
-    <a class="picLink">
+    <a class="picLink" href="w02/prove/aboutMe.html">
       <img src="images/family.png" alt="My family">
       <h2>About me</h2>
+    </a>
+    <a id="midLink" class="picLink" href="w02/assignments.html">
+      <img src="images/family.png" alt="My family">
+      <h2>Assignments</h2>
+    </a>
+    <a class="picLink" href="project/index.html">
+      <img src="images/family.png" alt="My family">
+      <h2>School of the Prophets</h2>
     </a>
   </div>
 </body>

@@ -20,6 +20,11 @@
     margin: auto;
 }
 
+#midLink {
+    margin-left: 2em;
+    margin-right: 2em; 
+}
+
 .flex {
     display: flex;
     flex-flow: row wrap;
@@ -33,7 +38,7 @@
     color: black;
     text-align: center;
     text-shadow: -1px 1px lightgray;
-    box-shadow: -3px 3px rgb(170, 167, 167);
+    box-shadow: -5px 5px rgb(170, 167, 167);
 }
 
 img {
