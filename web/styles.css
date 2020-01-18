@@ -18,12 +18,12 @@
     flex-flow: row wrap;
 }
 
-.picLink {
+.picLink { 
     max-width: 16em;
     max-height: 24em;
     flex-direction: column;
     background-color: lightseagreen;
-    color: darkslategray;
+    color: black;
     text-shadow: -1px 1px lightgray;
 }
 

@@ -12,7 +12,7 @@
   <div class="flex">
     <a class="picLink">
       <img src="images/family.png" alt="My family">
-      <p>About me</p>
+      <h2>About me</h2>
     </a>
   </div>
 </body>
