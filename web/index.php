@@ -9,7 +9,7 @@
 
 <body>
   <?php include "header.php";?>
-  <div class="flex">
+  <div id="landingMenu" class="flex">
     <a class="picLink">
       <img src="images/family.png" alt="My family">
       <h2>About me</h2>

@@ -13,6 +13,13 @@
     padding-bottom: 2px;
 }
 
+#landingMenu {
+    max-width: 54em;
+    max-height: fit-content;
+    padding-top: 8em;
+    margin: auto;
+}
+
 .flex {
     display: flex;
     flex-flow: row wrap;
@@ -26,7 +33,7 @@
     color: black;
     text-align: center;
     text-shadow: -1px 1px lightgray;
-    box-shadow: -1px 1px lightsteelblue;
+    box-shadow: -3px 3px lightsteelblue;
 }
 
 img {
