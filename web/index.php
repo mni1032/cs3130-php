@@ -8,8 +8,12 @@
 </head>
 
 <body>
-  <?php
-    include "header.php";
-  ?>
+  <?php include "header.php";?>
+  <div class="flex">
+    <a class="picLink">
+      <img src="images/family.png" alt="My family">
+      <p>About me</p>
+    </a>
+  </div>
 </body>
 </html>
