@@ -1,5 +1,5 @@
 #header {
-    max-height: 2em;
+    max-height: fit-content;
     background-color: lightseagreen;
     text-align: center;
     color: darkslategray;
