@@ -20,11 +20,6 @@
     margin: auto;
 }
 
-#midLink {
-    margin-left: 2em;
-    margin-right: 2em; 
-}
-
 .flex {
     display: flex;
     flex-flow: row wrap;
@@ -34,8 +29,10 @@
     max-width: 16em;
     max-height: 24em;
     flex-direction: column;
+    margin: 2em;
     background-color: lightseagreen;
     color: black;
+    text-decoration: none;
     text-align: center;
     text-shadow: -1px 1px lightgray;
     box-shadow: -5px 5px rgb(170, 167, 167);
