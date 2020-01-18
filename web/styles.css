@@ -27,7 +27,7 @@
 
 .picLink { 
     max-width: 16em;
-    max-height: 24em;
+    max-height: fit-content;
     flex-direction: column;
     margin: 2em;
     background-color: lightseagreen;
