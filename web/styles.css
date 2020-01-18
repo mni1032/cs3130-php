@@ -30,12 +30,13 @@
     max-height: fit-content;
     flex-direction: column;
     margin: 2em;
+    padding-top: 1px;
     background-color: lightseagreen;
     color: black;
     text-decoration: none;
     text-align: center;
     text-shadow: -1px 1px lightgray;
-    box-shadow: -5px 5px rgb(170, 167, 167);
+    box-shadow: -5px 5px rgb(32, 32, 32);
 }
 
 img {
