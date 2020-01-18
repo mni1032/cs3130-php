@@ -26,3 +26,7 @@
     color: darkslategray;
     text-shadow: -1px 1px lightgray;
 }
+
+img {
+    max-width: 100%;
+}
