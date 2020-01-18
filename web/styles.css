@@ -26,6 +26,7 @@
     color: black;
     text-align: center;
     text-shadow: -1px 1px lightgray;
+    box-shadow: -1px 1px lightsteelblue;
 }
 
 img {
