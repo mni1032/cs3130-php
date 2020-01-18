@@ -22,6 +22,7 @@
     max-width: 16em;
     max-height: 24em;
     flex-direction: column;
+    justify-content: center;
     background-color: lightseagreen;
     color: black;
     text-shadow: -1px 1px lightgray;
