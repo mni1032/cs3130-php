@@ -15,11 +15,11 @@
       <img src="images/family.png" alt="My family">
       <h2>About me</h2>
     </a>
-    <a id="assign" class="picLink" href="w02/prove/assignments.html">
+    <a id="assign" class="picLink" href="w02/prove/assignments.html" onmouseenter="changeToWhite(this.id)" onmouseleave="changeToBlack(this.id)">
       <img src="images/working.jpg" alt="Man working at computer">
       <h2>Assignments</h2>
     </a>
-    <a id="project" class="picLink" href="project/index.html">
+    <a id="project" class="picLink" href="project/index.html" onmouseenter="changeToWhite(this.id)" onmouseleave="changeToBlack(this.id)">
       <img src="images/books.jpg" alt="Stack of books">
       <h2>School of the Prophets</h2>
     </a>
