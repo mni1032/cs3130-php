@@ -25,14 +25,14 @@
 }
 #familyPicHolder {
     background-color: blue;
-    max-width: 50em;
+    max-width: 40em;
     width: 70%;
     min-width: 16em;
     margin: auto;
 }
 
 #familyPic {
-    width: auto;
+    object-fit: contain;
 }
 
 #header {
