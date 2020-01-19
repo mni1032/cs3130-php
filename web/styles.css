@@ -25,9 +25,10 @@
 }
 
 .aboutInfo {
-    background-color: lightseagreen;
+    border: 2px lightseagreen;
     color: black;
     text-shadow: -1px 1px lightgray;
+    padding: 3px
 }
 
 #familyPicHolder {
