@@ -9,7 +9,7 @@
 
 <body>
     <?php include "../../header.php";?>
-    <div id=familyPicHolder">
+    <div id="familyPicHolder">
         <img id="familyPic" src="../../images/family.png">
     </div>
 </body>
