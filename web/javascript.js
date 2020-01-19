@@ -1,5 +1,7 @@
-$(document).ready(function(){
-    $("a").hover(function(){
-      $(this).css("color", "white");
-    });
-});   
+function changeToWhite(id) {
+    document.getElementById(id).style.color = "white";
+}
+
+function changeToBlack(id) {
+    document.getElementById(id).style.color = "black";
+}
