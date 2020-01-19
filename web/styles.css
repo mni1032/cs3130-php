@@ -4,8 +4,9 @@
 }
 
 #familyPic {
+    max-width: 40em;
     width: 70%;
-    min-width: 40em;
+    min-width: 20em;
     margin: auto;
 }
 
