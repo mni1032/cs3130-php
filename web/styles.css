@@ -24,11 +24,14 @@
     box-shadow: -5px 5px rgb(122, 122, 122);
 }
 #familyPicHolder {
-    background-color: blue;
     max-width: 30em;
     width: 70%;
     min-width: 20em;
     margin: auto;
+}
+
+#familyPic {
+    width: auto;
 }
 
 #header {
