@@ -18,7 +18,7 @@ a:hover .picLink{
 
 .picLink { 
     max-width: 16em;
-    max-height: fit-content;
+    height: fit-content;
     flex-direction: column;
     margin: 2em;
     padding-top: 1px;
