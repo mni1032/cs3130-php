@@ -27,7 +27,7 @@
 .aboutInfo {
     position: absolute;
     max-width: 18em;
-    width: 20%;
+    width: 25%;
     min-width: 10em;
     border: 2px solid lightseagreen;
     background-color: whitesmoke;
@@ -41,7 +41,7 @@
 
 #me {
     top: 35%;
-    left: 5%;
+    left: -5%;
 }
 
 #rebecca {
@@ -51,7 +51,7 @@
 
 #paul-allen {
     top: 70%;
-    left: 40%;
+    left: 35%;
 }
 
 #familyPicHolder {
