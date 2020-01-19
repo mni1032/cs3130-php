@@ -29,7 +29,6 @@
     max-width: 18em;
     width: 25%;
     min-width: 10em;
-    border: 2px solid lightseagreen;
     background-color: whitesmoke;
     color: black;
     font-size: small;
@@ -43,9 +42,7 @@
 .faceBox {
     position: absolute;
     width: 25%;
-    height: 25%;
-    border: 2px solid lightseagreen;
-    visibility: hidden;
+    height: 25%;    
 }
 
 #me {
@@ -55,14 +52,17 @@
 
 #me:hover .me {
     visibility: visible;
+    border: 2px solid lightseagreen;
 }
 
 #rebecca:hover .rebecca {
     visibility: visible;
+    border: 2px solid lightseagreen;
 }
 
 #paul-allen:hover .paul-allen {
     visibility: visible;
+    border: 2px solid lightseagreen;
 }
 
 #rebecca {
