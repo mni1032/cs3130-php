@@ -37,42 +37,55 @@
     padding: 3px;
     box-shadow: -2px 2px rgb(122, 122, 122);
     z-index: 2;
+    visibility: hidden;
 }
 
 .faceBox {
     position: absolute;
     width: 25%;
     height: 25%;
-    min-width: 10em;
     border: 2px solid lightseagreen;
+    visibility: hidden;
 }
 
-#myFace {
+#me {
     top: 7%;
     left: 25%;
 }
 
-#rebeccaFace {
+#me:hover .me {
+    visibility: visible;
+}
+
+#rebecca:hover .rebecca {
+    visibility: visible;
+}
+
+#paul-allen:hover .paul-allen {
+    visibility: visible;
+}
+
+#rebecca {
     top: 15%;
     left: 55%;
 }
 
-#paul-allenFace {
+#paul-allen {
     top: 45%;
     left: 45%;
 }
 
-#me {
+#meBio {
     top: 35%;
     left: -5%;
 }
 
-#rebecca {
+#rebeccaBio {
     top: 60%;
     left: 75%;
 }
 
-#paul-allen {
+#paul-allenBio {
     top: 70%;
     left: 35%;
 }
