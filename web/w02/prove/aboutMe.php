@@ -11,7 +11,7 @@
     <?php include "../../header.php";?>
     <div id="familyPicHolder">
         <img id="familyPic" src="../../images/family.png">
-        <span id="meBio" class="aboutInf">My name is Spencer Rhoades. I'm from Fort Worth, Texas, but I love the cold! My major is computer science, but I'm planning 
+        <span id="meBio" class="aboutInfo">My name is Spencer Rhoades. I'm from Fort Worth, Texas, but I love the cold! My major is computer science, but I'm planning 
             to be a seminary teacher. I love reading, coding, hiking, and pretty much every other hobby.
         </span>
         <span id="rebeccaBio" class="aboutInfo">This is my wife, Rebecca. We met up here at BYU-I and have been married for about a year and a half.
