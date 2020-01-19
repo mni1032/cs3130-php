@@ -36,7 +36,7 @@
     padding: 3px;
     box-shadow: -2px 2px rgb(122, 122, 122);
     z-index: 2;
-    visibility: hidden;
+    border: 2px solid lightseagreen;
 }
 
 .faceBox {
@@ -75,22 +75,6 @@
 #paul-allenBio {
     top: 70%;
     left: 35%;
-}
-
-#me:hover + #meBio {
-    background-color: white;
-    visibility: visible;
-    border: 2px solid lightseagreen;
-}
-
-#rebecca:hover + #rebeccaBio {
-    visibility: visible;
-    border: 2px solid lightseagreen;
-}
-
-#paul-allen:hover + #paul-allenBio {
-    visibility: visible;
-    border: 2px solid lightseagreen;
 }
 
 #familyPicHolder {
