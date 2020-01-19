@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include "header.php";?>
+    <?php include "../../header.php";?>
     <?php include "menuBar.php";?>
     <img id="familyPic" src="../../images/family.png">
 </body>
