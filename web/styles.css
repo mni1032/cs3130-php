@@ -3,6 +3,12 @@
     padding: 0; 
 }
 
+#familyPic {
+    max-width: 70em;
+    min-width: 50em;
+    margin: auto;
+}
+
 #header {
     max-height: fit-content;
     background-color: lightseagreen;
@@ -38,7 +44,7 @@
     text-decoration: none;
     text-align: center;
     text-shadow: -1px 1px lightgray;
-    box-shadow: -5px 5px rgb(97, 96, 96);
+    box-shadow: -5px 5px rgb(122, 122, 122);
 }
 
 img {
