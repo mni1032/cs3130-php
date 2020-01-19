@@ -7,10 +7,6 @@ img {
     width: 100%;
 }
 
-a:hover .picLink{
-    color: white;
-}
-
 .flex {
     display: flex;
     flex-flow: row wrap;
@@ -30,6 +26,10 @@ a:hover .picLink{
     text-align: center;
     text-shadow: -1px 1px lightgray;
     box-shadow: -5px 5px rgb(122, 122, 122);
+}
+
+a:hover .picLink{
+    color: white;
 }
 
 .aboutInfo {
