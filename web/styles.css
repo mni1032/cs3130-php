@@ -32,11 +32,35 @@
     border: 2px solid lightseagreen;
     background-color: whitesmoke;
     color: black;
-    font-size: x-small;
+    font-size: small;
     text-shadow: -1px 1px lightgray;
     padding: 3px;
     box-shadow: -2px 2px rgb(122, 122, 122);
     z-index: 2;
+}
+
+.faceBox {
+    position: absolute;
+    max-width: 18em;
+    width: 25%;
+    height: 25%;
+    min-width: 10em;
+    border: 2px solid lightseagreen;
+}
+
+#myFace {
+    top: 10%;
+    left: 30%
+}
+
+#rebeccaFace {
+    top: 20%;
+    left: 65%;
+}
+
+#paul-allenFace {
+    top: 50%;
+    left: 50%;
 }
 
 #me {

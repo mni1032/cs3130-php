@@ -20,6 +20,9 @@
         <span id="paul-allen" class="aboutInfo">Paul-Allen is our seven-month-old son. He's much bigger thn this picture now and can crawl,
             pull himself up to standing, laugh, growl, and wave. He also likes jumping and eating real food.
         </span>
+        <div id="myFace" class="faceBox"></div>
+        <div id="rebeccaFace" class="faceBox"></div>
+        <div id="paul-allenFace" class="faceBox"></div>
     </div>
 </body>
 </html>
