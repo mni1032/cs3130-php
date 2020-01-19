@@ -26,18 +26,32 @@
 
 .aboutInfo {
     position: absolute;
-    top: 20px;
-    left: 50px;
     max-width: 18em;
     width: 20%;
     min-width: 10em;
     border: 2px solid lightseagreen;
     background-color: whitesmoke;
     color: black;
+    font-size: x-small;
     text-shadow: -1px 1px lightgray;
     padding: 3px;
     box-shadow: -5px 5px rgb(122, 122, 122);
     z-index: 2;
+}
+
+#me {
+    top: 250px;
+    left: 20px;
+}
+
+#rebecca {
+    bottom: 150px;
+    right: 20px;
+}
+
+#paul-allen {
+    top: 250px;
+    left: 80px;
 }
 
 #familyPicHolder {
