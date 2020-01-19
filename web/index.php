@@ -11,7 +11,7 @@
 <body>
   <?php include "header.php";?>
   <div id="landingMenu" class="flex">
-    <a id="about" class="picLink" href="w02/prove/aboutMe.php" onmouseover="changeTextColor(this.id);">
+    <a id="about" class="picLink" href="w02/prove/aboutMe.php"">
       <img src="images/family.png" alt="My family">
       <h2>About me</h2>
     </a>
