@@ -41,7 +41,6 @@
 
 .faceBox {
     position: absolute;
-    max-width: 18em;
     width: 25%;
     height: 25%;
     min-width: 10em;
@@ -49,18 +48,18 @@
 }
 
 #myFace {
-    top: 10%;
-    left: 30%
+    top: 7%;
+    left: 25%;
 }
 
 #rebeccaFace {
-    top: 20%;
-    left: 65%;
+    top: 15%;
+    left: 55%;
 }
 
 #paul-allenFace {
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 45%;
 }
 
 #me {
