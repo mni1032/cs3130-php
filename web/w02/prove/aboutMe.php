@@ -10,6 +10,8 @@
 <body>
     <?php include "../../header.php";?>
     <?php include "menuBar.php";?>
-    <img id="familyPic" src="../../images/family.png">
+    <div id=familyPicHolder">
+        <img id="familyPic" src="../../images/family.png">
+    </div>
 </body>
 </html>
