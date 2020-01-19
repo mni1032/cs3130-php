@@ -14,7 +14,7 @@
       <img src="images/family.png" alt="My family">
       <h2>About me</h2>
     </a>
-    <a class="picLink" href="w02/assignments.html">
+    <a class="picLink" href="w02/prove/assignments.html">
       <img src="images/working.jpg" alt="Man working at computer">
       <h2>Assignments</h2>
     </a>
