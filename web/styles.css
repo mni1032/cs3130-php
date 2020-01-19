@@ -25,13 +25,14 @@
 }
 
 .aboutInfo {
-    max-width: 13em;
+    max-width: 18em;
     width: 20%;
     min-width: 10em;
     border: 2px solid lightseagreen;
+    background-color: whitesmoke;
     color: black;
     text-shadow: -1px 1px lightgray;
-    padding: 3px
+    padding: 3px;
     box-shadow: -5px 5px rgb(122, 122, 122);
 }
 
@@ -40,6 +41,7 @@
     width: 70%;
     min-width: 16em;
     margin: auto;
+    margin-top: 10em;
 }
 
 #familyPic {
