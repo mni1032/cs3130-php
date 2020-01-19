@@ -47,32 +47,17 @@
 
 }
 
-#me {
+#myFace {
     top: 7%;
     left: 25%;
 }
 
-#me:hover .me {
-    visibility: visible;
-    border: 2px solid lightseagreen;
-}
-
-#rebecca:hover .rebecca {
-    visibility: visible;
-    border: 2px solid lightseagreen;
-}
-
-#paul-allen:hover .paul-allen {
-    visibility: visible;
-    border: 2px solid lightseagreen;
-}
-
-#rebecca {
+#rebeccaFace {
     top: 15%;
     left: 55%;
 }
 
-#paul-allen {
+#paul-allenFace {
     top: 45%;
     left: 45%;
 }
@@ -90,6 +75,21 @@
 #paul-allenBio {
     top: 70%;
     left: 35%;
+}
+
+#me:hover + #meBio {
+    visibility: visible;
+    border: 2px solid lightseagreen;
+}
+
+#rebecca:hover + #rebeccaBio {
+    visibility: visible;
+    border: 2px solid lightseagreen;
+}
+
+#paul-allen:hover + #paul-allenBio {
+    visibility: visible;
+    border: 2px solid lightseagreen;
 }
 
 #familyPicHolder {
