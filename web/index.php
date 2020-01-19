@@ -11,7 +11,7 @@
 <body>
   <?php include "header.php";?>
   <div id="landingMenu" class="flex">
-    <a class="picLink" href="w02/prove/aboutMe.php">
+    <a class="picLink" href="w02/prove/aboutMe.php" onmouseover="changeTextColor(this.id);">
       <img src="images/family.png" alt="My family">
       <h2>About me</h2>
     </a>
@@ -24,11 +24,5 @@
       <h2>School of the Prophets</h2>
     </a>
   </div>
-  <script>
-    var links = document.getElementsByClassName('picLink');
-    links[0].onmouseover = changeTextColor(links[0].id);
-    links[1].onmouseover = changeTextColor(links[1].id);
-    links[2].onmouseover = changeTextColor(links[2].id);
-  </script>
 </body>
 </html>
