@@ -39,6 +39,7 @@
 }
 
 #familyPicHolder {
+    position: relative;
     max-width: 40em;
     width: 70%;
     min-width: 16em;
