@@ -40,18 +40,18 @@
 }
 
 #me {
-    top: 250px;
-    left: 20px;
+    top: 50%;
+    left: 5%;
 }
 
 #rebecca {
-    top: 300px;
-    right: 20px;
+    top: 60%;
+    left: 95%;
 }
 
 #paul-allen {
-    top: 350px;
-    left: 200px;
+    top: 70%;
+    left: 50%;
 }
 
 #familyPicHolder {
