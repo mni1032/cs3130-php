@@ -23,17 +23,16 @@
     text-shadow: -1px 1px lightgray;
     box-shadow: -5px 5px rgb(122, 122, 122);
 }
-
-#familyPic {
-    width: 100%;
-}
-
 #familyPicHolder {
     max-width: 30em;
     width: 70%;
     min-width: 20em;
     height: fit-content;
     margin: auto;
+}
+
+#familyPic {
+    width: auto;
 }
 
 #header {

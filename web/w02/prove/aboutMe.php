@@ -9,7 +9,6 @@
 
 <body>
     <?php include "../../header.php";?>
-    <?php include "menuBar.php";?>
     <div id=familyPicHolder">
         <img id="familyPic" src="../../images/family.png">
     </div>
