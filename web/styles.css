@@ -28,10 +28,6 @@ img {
     box-shadow: -5px 5px rgb(122, 122, 122);
 }
 
-a:hover .picLink{
-    color: white;
-}
-
 .aboutInfo {
     position: absolute;
     max-width: 18em;
