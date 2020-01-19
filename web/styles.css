@@ -35,7 +35,7 @@
     font-size: x-small;
     text-shadow: -1px 1px lightgray;
     padding: 3px;
-    box-shadow: -5px 5px rgb(122, 122, 122);
+    box-shadow: -2px 2px rgb(122, 122, 122);
     z-index: 2;
 }
 
@@ -45,13 +45,13 @@
 }
 
 #rebecca {
-    bottom: 150px;
+    top: 300px;
     right: 20px;
 }
 
 #paul-allen {
-    top: 250px;
-    left: 80px;
+    top: 350px;
+    left: 200px;
 }
 
 #familyPicHolder {
