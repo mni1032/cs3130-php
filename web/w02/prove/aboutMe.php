@@ -12,5 +12,8 @@
     <div id="familyPicHolder">
         <img id="familyPic" src="../../images/family.png">
     </div>
+    <p class="abouInfo">My name is Spencer Rhoades. I'm from Fort Worth, Texas, but I love the cold! My major is computer science, but I'm planning 
+        to be a seminary teacher. I love reading, coding, hiking, and pretty much every other hobby.
+    </p>
 </body>
 </html>

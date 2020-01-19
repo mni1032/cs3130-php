@@ -23,8 +23,14 @@
     text-shadow: -1px 1px lightgray;
     box-shadow: -5px 5px rgb(122, 122, 122);
 }
+
+.aboutInfo {
+    background-color: lightseagreen;
+    color: black;
+    text-shadow: -1px 1px lightgray;
+}
+
 #familyPicHolder {
-    background-color: blue;
     max-width: 40em;
     width: 70%;
     min-width: 16em;
