@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-   <?php
+<?php
       $cookie_name = "user";
       $cookie_value = "Spencer Rhoades";
       setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
    ?>
+<!DOCTYPE html>
+<html>
    <head>
       <title>Sessions and Cookies</title>
    </head>
