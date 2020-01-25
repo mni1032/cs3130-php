@@ -28,7 +28,9 @@
     </form>
     <?php
         if(isset($_POST["add"])) {
-            $_SESSION["cart"][] = $_POST["add"];
+            if (!in_array($_POST["add"], $_SESSION["cart"])) {
+                $_SESSION["cart"][] = $_POST["add"];
+            }
             unset($_POST["add"]);
         }
         print_r($_SESSION["cart"]);
