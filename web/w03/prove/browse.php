@@ -17,24 +17,23 @@
 
 <body>
     <a href="cart.php">Cart</a>
-    <form action="" method="POST">
+    <form id="addToCart" action="" method="POST">
         <table>
             <?php
                 foreach($items as $name => $src) {
                     echo "<tr><td><p>$name</p><img src='$src'/>";
-                    echo "<input type='submit' name='add' value='Add to cart'</td></tr>";
-                    echo "<input style='display:none;' type='text' name='item' value='$name'";
+                    echo "<input type='submit' name='$name' value='Add to cart'";
                 }
             ?>
         </table>
     </form>
     <?php
-        if(isset($_POST["add"])) {
-            if (!in_array($_POST["item"], $_SESSION["cart"])) {
-                $_SESSION["cart"][] = $_POST["item"];
+        foreach($items as $item => $src)
+        if(isset($_POST[$item])) {
+            if (!in_array($item, $_SESSION["cart"])) {
+                $_SESSION["cart"][] = $item;
             }
-            unset($_POST["add"]);
-            unset($_POST["item"]);
+            unset($_POST[$item]);
         }
         print_r($_SESSION["cart"]);
     ?>
