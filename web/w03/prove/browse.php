@@ -21,7 +21,7 @@
             <?php
                 foreach($items as $name => $src) {
                     echo "<tr><td><p>$name</p><img src='$src'/>";
-                    echo "<input type='submit' name='add' value='$name'</td></tr>"
+                    echo "<input type='submit' name='add' value='$name'</td></tr>";
                 }
             ?>
         </table>
