@@ -12,26 +12,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
-    <title>HTML Template</title>
+    <title>School Supplies</title>
 </head>
 
 <body>
+    <a href="cart.php">Cart</a>
     <form action="" method="POST">
         <table>
             <?php
                 foreach($items as $name => $src) {
                     echo "<tr><td><p>$name</p><img src='$src'/>";
-                    echo "<input type='submit' name='add' value='$name'</td></tr>";
+                    echo "<input type='submit' name='add' value='Add to cart'</td></tr>";
+                    echo "<input style='display:none;' type='text' name='item' value='$name'"
                 }
             ?>
         </table>
     </form>
     <?php
         if(isset($_POST["add"])) {
-            if (!in_array($_POST["add"], $_SESSION["cart"])) {
-                $_SESSION["cart"][] = $_POST["add"];
+            if (!in_array($_POST["item"], $_SESSION["cart"])) {
+                $_SESSION["cart"][] = $_POST["item"];
             }
             unset($_POST["add"]);
+            unset($_POST["item"]);
         }
         print_r($_SESSION["cart"]);
     ?>
