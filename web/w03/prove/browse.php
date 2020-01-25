@@ -1,5 +1,8 @@
 <?php 
     session_start();
+    if (!isset($_SESSION["cart"])) {
+        $_SESSION["cart"] = array();
+    }
     include "items.php";
 ?>
 
@@ -17,10 +20,18 @@
         <table>
             <?php
                 foreach($items as $name => $src) {
-                    echo "<tr><td><p>$name</p><img src='$src'/></td></tr>";
+                    echo "<tr><td><p>$name</p><img src='$src'/>";
+                    echo "<input type='submit' name='add' value='$name'</td></tr>"
                 }
             ?>
         </table>
     </form>
+    <?php
+        if(isset($_POST["add"])) {
+            $_SESSION["cart"][] = $_POST["add"];
+            unset($_POST["add"]);
+        }
+        print_r($_SESSION["cart"]);
+    ?>
 </body>
 </html>
