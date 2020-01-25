@@ -13,12 +13,28 @@
 </head>
 
 <body>
+    <form action="" method="POST">
+        <table>
+            <?php
+                foreach($_SESSION["cart"] as $item) {
+                    $src = $items[$item];
+                    echo "<tr><td><p>$item</p><img src='$src'/></td></tr>";
+                    echo "<input type='submit' name='$item' value='Remove'</td></tr>";
+                }
+            ?>
+        </table>
+    </form>
     <?php
-        foreach($_SESSION["cart"] as $item) {
-            $src = $items[$item];
-            echo "<tr><td><p>$item</p><img src='$src'/></td></tr>";
-            echo "<input type='submit' name='remove' value='$name'</td></tr>";
+        $cart_items = $_SESSION["cart"];
+        foreach($cart_items as $item) {
+            if(isset($_POST[$item])) {
+                $delete_key = array_search($item, $cart_items);
+                unset($cart_items[$delete_key]);
+                $_SESSION["cart"] = $cart_items;
+                unset($_POST[$item]);
+            }
         }
+        print_r($_SESSION["cart"]);
     ?>
 </body>
 </html>

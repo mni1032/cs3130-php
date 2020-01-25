@@ -17,7 +17,7 @@
 
 <body>
     <a href="cart.php">Cart</a>
-    <form id="addToCart" action="" method="POST">
+    <form action="" method="POST">
         <table>
             <?php
                 foreach($items as $name => $src) {
