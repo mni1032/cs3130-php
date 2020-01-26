@@ -56,9 +56,15 @@ a {
 }
 
 a, .button {
+    color: whitesmoke;
+    border: none;
     background-color: coral;
     text-decoration: none;
     color: darkslategray;
     border-radius: 5px;
     padding: 2px;
+}
+
+input {
+    margin-top: 5px;;
 }

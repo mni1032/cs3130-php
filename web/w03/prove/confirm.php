@@ -14,6 +14,7 @@
 
 <body>
     <?php include "storeHeader.php"?>
+    <h2>Order confirmation</h2>
     <?php
         $street = $_POST["street"];
         $city = $_POST["city"];

@@ -9,6 +9,7 @@
 
 <body>
     <?php include "storeHeader.php"?>
+    <h2>Check out</h2>
     <a href="cart.php">Back to cart</a>
     <form action="confirm.php" method="POST">
         <label for="street">Street address</label>
