@@ -14,12 +14,17 @@
 }
 
 .itemTable {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.item {
     width: 30%;
     min-width: 20em;
     max-width: 40em;
-    margin: auto;
+    margin: 10px;
     background-color: lightseagreen;
-    padding: 3px;
+    padding: 8px;
     text-shadow: -1px 1px lightgray;
 }
 
