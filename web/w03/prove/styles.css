@@ -15,12 +15,12 @@
 
 .itemTable {
     width: 30%;
-    min-width: 8em;
-    max-width: 16em;
+    min-width: 20em;
+    max-width: 40em;
     margin: auto;
     background-color: lightseagreen;
 }
 
 img {
-    
+
 }
