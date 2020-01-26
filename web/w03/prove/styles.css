@@ -19,10 +19,12 @@
     max-width: 40em;
     margin: auto;
     background-color: lightseagreen;
+    padding: 3px;
 }
 
 img {
     width: 100%;
     box-shadow: -5px 5px rgb(107, 107, 107);
-    padding: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
