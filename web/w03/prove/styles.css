@@ -58,7 +58,7 @@ a {
     background-color: coral;
     text-decoration: none;
     border-radius: 5px;
-    padding: 2px;
+    padding: 4px;
 }
 
 .button {
@@ -67,9 +67,14 @@ a {
     background-color: coral;
     text-decoration: none;
     border-radius: 5px;
-    padding: 2px;
+    padding: 4px;
 }
 
 input {
-    margin-top: 5px;;
+    margin-top: 8px;
+}
+
+h2 {
+    color: darkslategray;
+    margin: 5px;
 }
