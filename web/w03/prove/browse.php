@@ -19,7 +19,7 @@
     <?php include "storeHeader.php"?>
     <a href="cart.php">Cart</a>
     <form action="" method="POST">
-        <div class="itemTable">
+        <div id="itemTable">
             <?php
                 foreach($items as $name => $src) {
                     echo "<div class='item'><p>$name</p><img src='$src'/><br/>";

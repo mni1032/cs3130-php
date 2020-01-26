@@ -22,7 +22,7 @@
         $address = "$street<br/>$city, $state $zip"; 
         echo "Your order will be shipped to:<br/>$address";
     ?>
-    <div class="itemTable">
+    <div class="checkoutTable">
         <?php
             foreach($_SESSION["cart"] as $item) {
                 $src = $items[$item];

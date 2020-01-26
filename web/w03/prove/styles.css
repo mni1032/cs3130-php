@@ -13,7 +13,13 @@
     padding-bottom: 2px;
 }
 
-.itemTable {
+.checkoutTable {
+    margin: auto;
+    width: 30%;
+    min-width: 20em;
+}
+
+#itemTable {
     display: flex;
     flex-flow: column wrap;
     margin: auto;
@@ -28,7 +34,7 @@
     max-width: 40em;
     height: fit-content;
     margin: 10px;
-    background-color: rgb(97, 202, 197);
+    background-color: rgb(150, 206, 203);
     padding: 8px;
     text-shadow: -1px 1px lightgray;
     text-align: center;
@@ -40,4 +46,12 @@ img {
     box-shadow: -4px 4px rgb(78, 78, 78);
     display: block;
     margin: auto;
+}
+
+a {
+    background-color: coral;
+    text-decoration: none;
+    color: darkslategray;
+    text-shadow: -1px 1px lightgray;
+    border-radius: 10px;
 }

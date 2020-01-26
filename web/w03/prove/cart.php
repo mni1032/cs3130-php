@@ -26,10 +26,9 @@
                 unset($_POST[$item]);
             }
         }
-        print_r($_SESSION["cart"]);
     ?>
     <form action="" method="POST">
-        <div class="itemTable">
+        <div class="checkoutTable">
             <?php
                 foreach($_SESSION["cart"] as $item) {
                     $src = $items[$item];
