@@ -51,7 +51,10 @@ img {
 }
 
 a {
-    margin: auto;
+    margin: 5px;
+}
+
+a, button {
     background-color: coral;
     text-decoration: none;
     color: darkslategray;

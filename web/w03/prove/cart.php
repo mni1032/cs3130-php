@@ -33,7 +33,7 @@
                 foreach($_SESSION["cart"] as $item) {
                     $src = $items[$item];
                     echo "<div class='item'><p>$item</p><img src='$src'/><br/>";
-                    echo "<input type='submit' name='$item' value='Remove'></div>";
+                    echo "<input class='button' type='submit' name='$item' value='Remove'></div>";
                 }
             ?>
         </div>

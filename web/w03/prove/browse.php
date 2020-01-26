@@ -23,7 +23,7 @@
             <?php
                 foreach($items as $name => $src) {
                     echo "<div class='item'><p>$name</p><img src='$src'/><br/>";
-                    echo "<input type='submit' name='$name' value='Add to cart'/></div>";
+                    echo "<input class='button' type='submit' name='$name' value='Add to cart'/></div>";
                }
             ?>
         </div>

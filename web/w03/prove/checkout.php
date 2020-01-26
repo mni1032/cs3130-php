@@ -71,7 +71,7 @@
         </select>
         <label for="zip">ZIP code</label>
         <input id="zip" type="text" name="zip"/>
-        <input type="submit" value="Place order"/>
+        <input class='button' type="submit" value="Place order"/>
     </form>
 </body>
 </html>
