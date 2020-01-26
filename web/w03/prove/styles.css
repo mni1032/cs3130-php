@@ -16,7 +16,9 @@
 .itemTable {
     display: flex;
     flex-flow: column wrap;
+    margin: auto;
     max-width: 85em;
+    width: 65%;
     min-width: 40em;
     height: 140em;
 }
