@@ -1,8 +1,3 @@
-<?php 
-    session_start();
-    include "items.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +14,6 @@
         <input id="street" type="text" name="street"/>
         <label for="city">City</label>
         <input id="city" type="text" name="city"/>
-        <label for="state">Street address</label>
-        <input id="street" type="text" name="street"/>
         <label for="state">State</label>
         <select id="state" name="state">
             <option value="AL">AL</option>
@@ -75,6 +68,9 @@
             <option value="WI">WI</option>
             <option value="WY">WY</option>
         </select>
+        <label for="zip">ZIP code</label>
+        <input id="zip" type="text" name="zip"/>
+        <input type="submit" value="Place order"/>
     </form>
 </body>
 </html>
