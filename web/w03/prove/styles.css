@@ -22,5 +22,7 @@
 }
 
 img {
-
+    width: 100%;
+    box-shadow: -5px 5px rgb(107, 107, 107);
+    padding: 3px;
 }

@@ -8,14 +8,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
     <title>Cart</title>
 </head>
 
 <body>
     <?php include "storeHeader.php"?>
     <a href="browse.php">Continue shopping</a>
-    <a href="checkout.html">Check out</a>
+    <a href="checkout.php">Check out</a>
     <?php
         $cart_items = $_SESSION["cart"];
         foreach($cart_items as $item) {
@@ -34,7 +34,7 @@
                 <?php
                     foreach($_SESSION["cart"] as $item) {
                         $src = $items[$item];
-                        echo "<tr><td><p>$item</p><img src='$src'/>";
+                        echo "<tr><td><p>$item</p><img src='$src'/><br/>";
                         echo "<input type='submit' name='$item' value='Remove'</td></tr>";
                     }
                 ?>

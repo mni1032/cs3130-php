@@ -23,7 +23,7 @@
             <table>
                 <?php
                     foreach($items as $name => $src) {
-                        echo "<tr><td><p>$name</p><img src='$src'/>";
+                        echo "<tr><td><p>$name</p><img src='$src'/><br/>";
                         echo "<input type='submit' name='$name' value='Add to cart'/></td></tr>";
                     }
                 ?>
