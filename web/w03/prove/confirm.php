@@ -22,13 +22,15 @@
         $address = "$street<br/>$city, $state $zip"; 
         echo "Your order will be shipped to:<br/>$address";
     ?>
-    <table class="itemTable">
-        <?php
-            foreach($_SESSION["cart"] as $item) {
-                $src = $items[$item];
-                echo "<tr><td><p>$item</p><img src='$src'/></td></tr>";
-            }
-        ?>
-    </table>
+    <div class="itemTable">
+        <table>
+            <?php
+                foreach($_SESSION["cart"] as $item) {
+                    $src = $items[$item];
+                    echo "<tr><td><p>$item</p><img src='$src'/></td></tr>";
+                }
+            ?>
+        </table>
+    </div>
 </body>
 </html>

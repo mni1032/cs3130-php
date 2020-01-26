@@ -19,14 +19,16 @@
     <?php include "storeHeader.php"?>
     <a href="cart.php">Cart</a>
     <form action="" method="POST">
-        <table class="itemTable">
-            <?php
-                foreach($items as $name => $src) {
-                    echo "<tr><td><p>$name</p><img src='$src'/>";
-                    echo "<input type='submit' name='$name' value='Add to cart'/></td></tr>";
-                }
-            ?>
-        </table>
+        <div class="itemTable">
+            <table>
+                <?php
+                    foreach($items as $name => $src) {
+                        echo "<tr><td><p>$name</p><img src='$src'/>";
+                        echo "<input type='submit' name='$name' value='Add to cart'/></td></tr>";
+                    }
+                ?>
+            </table>
+        </div>
     </form>
     <?php
         foreach($items as $item => $src)

@@ -29,15 +29,17 @@
         print_r($_SESSION["cart"]);
     ?>
     <form action="" method="POST">
-        <table class="itemTable">
-            <?php
-                foreach($_SESSION["cart"] as $item) {
-                    $src = $items[$item];
-                    echo "<tr><td><p>$item</p><img src='$src'/>";
-                    echo "<input type='submit' name='$item' value='Remove'</td></tr>";
-                }
-            ?>
-        </table>
+        <div class="itemTable">
+            <table>
+                <?php
+                    foreach($_SESSION["cart"] as $item) {
+                        $src = $items[$item];
+                        echo "<tr><td><p>$item</p><img src='$src'/>";
+                        echo "<input type='submit' name='$item' value='Remove'</td></tr>";
+                    }
+                ?>
+            </table>
+        </div>
     </form>
 </body>
 </html>
