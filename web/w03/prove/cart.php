@@ -15,8 +15,6 @@
 <body>
     <?php include "storeHeader.php"?>
     <h2>Your cart</h2>
-    <a href="browse.php">Continue shopping</a>
-    <a href="checkout.php">Check out</a>
     <?php
         $cart_items = $_SESSION["cart"];
         foreach($cart_items as $item) {
@@ -39,5 +37,7 @@
             ?>
         </div>
     </form>
+    <a href="browse.php">Continue shopping</a>
+    <a href="checkout.php">Check out</a>
 </body>
 </html>

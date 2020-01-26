@@ -10,7 +10,6 @@
 <body>
     <?php include "storeHeader.php"?>
     <h2>Check out</h2>
-    <a href="cart.php">Back to cart</a>
     <form action="confirm.php" method="POST">
         <label for="street">Street address</label>
         <input id="street" type="text" name="street"/>
@@ -74,5 +73,6 @@
         <input id="zip" type="text" name="zip"/>
         <input class='button' type="submit" value="Place order"/>
     </form>
+    <a href="cart.php">Back to cart</a>
 </body>
 </html>
