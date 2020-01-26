@@ -13,20 +13,20 @@
 </head>
 
 <body>
+    <?php include "storeHeader.php"?>
     <?php
         $street = $_POST["street"];
         $city = $_POST["city"];
         $state = $_POST["state"];
         $zip = $_POST["zip"];
-        $address = "$street\n$city, $state $zip"; 
-        echo "Your order will be shipped to:\n$address";
+        $address = "$street<br/>$city, $state $zip"; 
+        echo "Your order will be shipped to:<br/>$address";
     ?>
-    <table>
+    <table class="itemTable">
         <?php
             foreach($_SESSION["cart"] as $item) {
                 $src = $items[$item];
-                echo "<tr><td><p>$item</p><img src='$src'/>";
-                echo "<input type='submit' name='$item' value='Remove'</td></tr>";
+                echo "<tr><td><p>$item</p><img src='$src'/></td></tr>";
             }
         ?>
     </table>

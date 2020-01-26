@@ -11,14 +11,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
     <title>School Supplies</title>
 </head>
 
 <body>
+    <?php include "storeHeader.php"?>
     <a href="cart.php">Cart</a>
     <form action="" method="POST">
-        <table>
+        <table class="itemTable">
             <?php
                 foreach($items as $name => $src) {
                     echo "<tr><td><p>$name</p><img src='$src'/>";
@@ -35,7 +36,6 @@
             }
             unset($_POST[$item]);
         }
-        print_r($_SESSION["cart"]);
     ?>
 </body>
 </html>

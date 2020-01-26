@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <?php include "storeHeader.php"?>
     <a href="browse.php">Continue shopping</a>
     <a href="checkout.html">Check out</a>
     <?php
@@ -28,7 +29,7 @@
         print_r($_SESSION["cart"]);
     ?>
     <form action="" method="POST">
-        <table>
+        <table class="itemTable">
             <?php
                 foreach($_SESSION["cart"] as $item) {
                     $src = $items[$item];

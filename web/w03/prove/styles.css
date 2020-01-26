@@ -1,0 +1,16 @@
+#storeHeader {
+    max-height: fit-content;
+    background-color: lightseagreen;
+    text-align: center;
+    color: darkslategray;
+    text-shadow: -1px 1px lightgray;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.itemTable {
+    width: 30%;
+    min-width: 16em;
+    margin: auto;
+    background-color: lightseagreen;
+}
