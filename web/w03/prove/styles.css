@@ -53,14 +53,19 @@ img {
 
 a {
     margin: 5px;
-}
-
-a, .button {
     color: whitesmoke;
     border: none;
     background-color: coral;
     text-decoration: none;
-    color: darkslategray;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.button {
+    color: whitesmoke;
+    border-width: 0px;
+    background-color: coral;
+    text-decoration: none;
     border-radius: 5px;
     padding: 2px;
 }
