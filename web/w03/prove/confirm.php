@@ -23,14 +23,12 @@
         echo "Your order will be shipped to:<br/>$address";
     ?>
     <div class="itemTable">
-        <table>
-            <?php
-                foreach($_SESSION["cart"] as $item) {
-                    $src = $items[$item];
-                    echo "<tr><td><p>$item</p><img src='$src'/></td></tr>";
-                }
-            ?>
-        </table>
+        <?php
+            foreach($_SESSION["cart"] as $item) {
+                $src = $items[$item];
+                echo "<div class='item'><p>$item</p><img src='$src'/></div>";
+            }
+        ?>
     </div>
 </body>
 </html>

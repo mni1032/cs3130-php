@@ -20,14 +20,12 @@
     <a href="cart.php">Cart</a>
     <form action="" method="POST">
         <div class="itemTable">
-            <table>
-                <?php
-                    foreach($items as $name => $src) {
-                        echo "<tr><td><p>$name</p><img src='$src'/><br/>";
-                        echo "<input type='submit' name='$name' value='Add to cart'/></td></tr>";
-                    }
-                ?>
-            </table>
+            <?php
+                foreach($items as $name => $src) {
+                    echo "<div class='item'><p>$name</p><img src='$src'/><br/>";
+                    echo "<input type='submit' name='$name' value='Add to cart'/></div>";
+               }
+            ?>
         </div>
     </form>
     <?php
