@@ -16,10 +16,18 @@
     <?php include "storeHeader.php"?>
     <h2>Order confirmation</h2>
     <?php
-        $street = $_POST["street"];
-        $city = $_POST["city"];
-        $state = $_POST["state"];
-        $zip = $_POST["zip"];
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+        $street = test_input($_POST["street"]);
+        $city = test_input($_POST["city"]);
+        $state = test_input($_POST["state"]);
+        $zip = test_input($_POST["zip"]);
         $address = "$street<br/>$city, $state $zip"; 
         echo "Your order will be shipped to:<br/>$address";
     ?>
