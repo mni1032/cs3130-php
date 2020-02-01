@@ -8,12 +8,21 @@ SELECT name, address FROM w4_restaurant;
 SELECT first_name || ' ' || last_name AS full_name FROM w4_customer;
 
 \echo '**List  all menu item names and prices of a particular restaurant**'
--- write your query here
+SELECT name, price FROM w4_menu_item WHERE restaurant_id = 1;
 
 \echo '*View all orders of a particular customer - show the customer name*'
--- write your query here
+SELECT o.id
+,      c.first_name || ' ' || c.last_name AS customer_name 
+FROM w4_order o
+INNER JOIN w4_customer c ON o.customer_id = c.id
+WHERE o.customer_id = 1;
 
 \echo '************List  all orders of a particular restaurant************'
--- write your query here
+SELECT omi.order_id
+,      mi.name
+FROM w4_order_menu_items omi
+INNER JOIN w4_menu_item mi ON omi.menu_item_id = mi.id
+INNER JOIN w4_restaurant r ON mi.restaurant_id = r.id
+WHERE restaurant_id = 1;
 
 
