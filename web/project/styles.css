@@ -3,6 +3,10 @@
     padding: 0; 
 }
 
+h3, p {
+    margin: 5px;
+}
+
 #header {
     max-height: fit-content;
     padding-top: 2px;
