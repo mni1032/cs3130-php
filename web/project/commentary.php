@@ -9,14 +9,14 @@
 
 <body>
     <?php
-        include "../header.php";
-
+        include "header.php";
+        
         if (isset($_POST['submit'])) {
 
             $book = $_POST['book'];
             $chapter = $_POST['chapter'];
             $verse = $_POST['verse'];
-            echo "<h3>Commentary on $book $chapter:$verse</h3>";
+            echo "<h3>$book $chapter:$verse</h3>";
             require "dbConnect.php";
             $db = get_db();
 
@@ -28,7 +28,7 @@
                 $text = $vRow['text'];
 
                 echo "<p>$text</p>";
-
+                echo "<h3>Commentary on $book $chapter:$verse</h3>";
                 $comments = $db->prepare("SELECT text FROM comment WHERE verse_id = $verse_id");
                 $comments->execute();
                 while ($cRow = $comments->fetch(PDO::FETCH_ASSOC)) {
