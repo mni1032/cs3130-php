@@ -1,5 +1,5 @@
 --insert admin
-INSERT INTO admininstrator
+INSERT INTO member
 ( id
 , first_name
 , last_name
@@ -51,4 +51,5 @@ INSERT INTO comment
 , (SELECT CURRENT_DATE)
 , (SELECT id FROM verse WHERE book = '' AND chapter =  AND verse = )
 , (SELECT id FROM citation WHERE citation = '')    
+, ''
 );

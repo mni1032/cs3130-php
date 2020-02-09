@@ -62,33 +62,67 @@ LIMIT 1;
 
 \echo '5d. Who has competed in the least competitions? How many have they competed in?'
 ---------------- Your code here ----------------
-
 \echo '5d. people who have competed in 1 or more'
 ---------------- Your code here ----------------
-SELECT p.name, COUNT(e.id) as num_events
+SELECT name, num_events
+FROM
+(SELECT p.name AS name, COUNT(e.id) as num_events
 FROM w5_participant p
 INNER JOIN w5_event_participant ep ON p.id = ep.participant_id
 INNER JOIN w5_event e ON ep.event_id = e.id
-GROUP BY p.name
-ORDER BY num_events ASC
-LIMIT 1;
+GROUP BY p.name) event_counts
+WHERE num_events = 1;
 
--- \echo '5d. - people that didn''t compete in any'
+\echo '5d. - people that didn''t compete in any'
 ---------------- Your code here ----------------
-SELECT p.name, COUNT(e.id) as num_events
+SELECT name FROM w5_participant WHERE id NOT IN (SELECT participant_id FROM w5_event_participant);
+
+\echo '6a. Is there anyone who has competed in the same competition twice? '
+---------------- Your code here ----------------
+SELECT name, event_name, num_same
+FROM
+(SELECT p.name AS name, e.name AS event_name, COUNT(e.id) as num_same
 FROM w5_participant p
-LEFT JOIN w5_event_participant ep ON p.id = ep.participant_id
-LEFT JOIN w5_event e ON ep.event_id = e.id
-GROUP BY p.name
-ORDER BY num_events ASC;
--- \echo '6a. Is there anyone who has competed in the same competition twice? '
----------------- Your code here ----------------
+INNER JOIN w5_event_participant ep ON p.id = ep.participant_id
+INNER JOIN w5_event e ON ep.event_id = e.id
+GROUP BY p.name, e.name) event_counts
+WHERE num_same = 2
+ORDER BY num_same DESC;
 
--- \echo '6b. Which event had the most competitors? '
+\echo '6b. Which event had the most competitors? '
 ---------------- Your code here ----------------
+SELECT event_name, COUNT(name) as num_participants
+FROM
+(SELECT p.name AS name, e.name AS event_name
+FROM w5_participant p
+INNER JOIN w5_event_participant ep ON p.id = ep.participant_id
+INNER JOIN w5_event e ON ep.event_id = e.id
+GROUP BY p.name, e.name) AS event_participants
+GROUP BY event_name
+ORDER BY num_participants DESC
+LIMIT 3; 
 
--- \echo '6c. Which event had the least competitors? '
+\echo '6c. Which event had the least competitors? '
 ---------------- Your code here ----------------
+SELECT event_name, COUNT(name) as num_participants
+FROM
+(SELECT p.name AS name, e.name AS event_name
+FROM w5_participant p
+INNER JOIN w5_event_participant ep ON p.id = ep.participant_id
+INNER JOIN w5_event e ON ep.event_id = e.id
+GROUP BY p.name, e.name) AS event_participants
+GROUP BY event_name
+ORDER BY num_participants ASC
+LIMIT 3;
 
--- \echo '6d. List all competitors that competed in the same event at least once '
+\echo '6d. List all competitors that competed in the same event at least once '
 ---------------- Your code here ----------------
+SELECT name, event_name, num_same
+FROM
+(SELECT p.name AS name, e.name AS event_name, COUNT(e.id) as num_same
+FROM w5_participant p
+INNER JOIN w5_event_participant ep ON p.id = ep.participant_id
+INNER JOIN w5_event e ON ep.event_id = e.id
+GROUP BY p.name, e.name) event_counts
+WHERE num_same > 1
+ORDER BY num_same DESC;

@@ -1,4 +1,4 @@
-CREATE TABLE administrator 
+CREATE TABLE member 
 ( id          SERIAL       NOT NULL PRIMARY KEY
 , first_name  VARCHAR(50)  NOT NULL
 , last_name   VARCHAR(50)  NOT NULL
@@ -11,19 +11,19 @@ CREATE TABLE verse
 , book        VARCHAR(50)  NOT NULL
 , chapter     INT          NOT NULL
 , verse       INT          NOT NULL
-, text        NVARCHAR     NOT NULL
+, text        TEXT         NOT NULL
 );
 
 CREATE TABLE citation
 ( id          SERIAL       NOT NULL PRIMARY KEY
-, citation    NVARCHAR     NOT NULL
+, citation    TEXT         NOT NULL
 );
 
 CREATE TABLE comment
 ( id          SERIAL       NOT NULL PRIMARY KEY
-, author_id   INT          NOT NULL REFERENCES administrator(id)
+, author_id   INT          NOT NULL REFERENCES member(id)
 , create_date DATE         NOT NULL
 , verse_id    INT          NOT NULL REFERENCES verse(id)
 , citation_id INT          NOT NULL REFERENCES citation(id)
-, text        NVARCHAR     NOT NULL
+, text        TEXT         NOT NULL
 );
