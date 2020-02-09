@@ -9,8 +9,35 @@
 
 <body>
     <?php
-        include "../header.php"
-        
+        include "../header.php";
+
+        if (isset($_POST['submit'])) {
+
+            $book = $_POST['book'];
+            $chapter = $_POST['chapter'];
+            $verse = $_POST['verse'];
+            echo "<h3>Commentary on $book $chapter:$verse</h3>";
+            require "dbConnect.php";
+            $db = get_db();
+
+            $verse_text = $db->prepare("SELECT id,text FROM verse WHERE book='$book' AND chapter=$chapter AND verse=$verse");
+            $verse_text->execute();
+
+            while ($vRow = $verse_text->fetch(PDO::FETCH_ASSOC)) {
+                $verse_id = $vRow['id'];
+                $text = $vRow['text'];
+
+                echo "<p>$text</p>";
+
+                $comments = $db->prepare("SELECT text FROM comments WHERE verse_id = $verse_id");
+                $comments->execute();
+                while ($cRow = $comments->fetch(PDO::FETCH_ASSOC)) {
+                    $comment = $cRow['text'];
+                    echo "<p>$comment</p>";
+                }
+                
+            }
+        }
     ?>
 </body>
 </html>
