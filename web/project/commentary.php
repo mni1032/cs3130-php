@@ -33,7 +33,7 @@
                 $comments->execute();
                 while ($cRow = $comments->fetch(PDO::FETCH_ASSOC)) {
                     $comment = $cRow['text'];
-                    echo "<p>$comment</p>";
+                    echo "<p class='comment'>$comment</p>";
                 }
                 
             }
