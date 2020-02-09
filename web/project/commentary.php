@@ -29,7 +29,7 @@
 
                 echo "<p>$text</p>";
 
-                $comments = $db->prepare("SELECT text FROM comments WHERE verse_id = $verse_id");
+                $comments = $db->prepare("SELECT text FROM comment WHERE verse_id = $verse_id");
                 $comments->execute();
                 while ($cRow = $comments->fetch(PDO::FETCH_ASSOC)) {
                     $comment = $cRow['text'];
