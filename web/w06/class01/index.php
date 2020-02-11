@@ -22,8 +22,8 @@
                         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                            $id = $row['id'];
                            $food = $row['food'];
+                           echo "<option value='$id'>$food</option>";
                         }
-                        echo "<option value='$id'>$food</option>";
                      ?>
                   </select>
                </div>
