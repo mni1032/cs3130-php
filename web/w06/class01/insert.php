@@ -14,7 +14,7 @@ try
 	$statement->bindValue(':food', $food);
 	$statement->execute();
 	
-	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
+	$userId = $db->lastInsertId("w6_user_id_seq");
 	// get id of last inserted row - save in $userId
 }
 catch (Exception $ex)
