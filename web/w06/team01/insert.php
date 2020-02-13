@@ -6,33 +6,39 @@ $verse = $_POST['verse'];
 $content = $_POST['content'];
 $topics = $_POST['topics'];
 
-require("dbConnect.php");
-$db = get_db();
+echo "<h1>$book $chapter:$verse</h1>";
+echo "<p>$content</p>";
+foreach ($topics as $topic) {
+    echo "<p>$topic</p>";
+} 
 
-try
-{
-	// insert into database
-	$query = 'INSERT INTO Scriptures (book, chapter, verse) VALUES (:book, :chapter, :verse, :content)';
-	$statement = $db->prepare($query);
-	$statement->bindValue(':book', $book);
-	$statement->bindValue(':chapter', $chapter);
-    $statement->bindValue(':verse', $verse);
-    $statement->bindValue(':content', $content);
-    $statement->execute();
+// require("dbConnect.php");
+// $db = get_db();
 
-    $scriptureId = $db->lastInsertId("scriptures_id_seq");
+// try
+// {
+// 	// insert into database
+// 	$query = 'INSERT INTO Scriptures (book, chapter, verse) VALUES (:book, :chapter, :verse, :content)';
+// 	$statement = $db->prepare($query);
+// 	$statement->bindValue(':book', $book);
+// 	$statement->bindValue(':chapter', $chapter);
+//     $statement->bindValue(':verse', $verse);
+//     $statement->bindValue(':content', $content);
+//     $statement->execute();
+
+//     $scriptureId = $db->lastInsertId("scriptures_id_seq");
     
-    foreach ($topics as $topic) {
+//     foreach ($topics as $topic) {
 
-    }
-    $query = 'INSERT INTO scripture_topic (scripture_id, topic_id) VALUES (:scriptureId'
-}
-catch (Exception $ex)
-{
-	echo "Error with DB. Details: $ex";
-	die();
-}
-header("Location: display.php");
+//     }
+//     $query = 'INSERT INTO scripture_topic (scripture_id, topic_id) VALUES (:scriptureId'
+// }
+// catch (Exception $ex)
+// {
+// 	echo "Error with DB. Details: $ex";
+// 	die();
+// }
+// header("Location: display.php");
 
-die(); 
+// die(); 
 ?>
