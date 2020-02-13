@@ -10,12 +10,13 @@
 <body>
     <?php
         include "header.php";
+        include "menuBar.php";
     ?>
     <div class="formHolder">
         <form action="validate.php" method="POST">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username"/>
-            <label for="password">Username</label>
+            <input type="text" id="username" name="username"/><br/>
+            <label for="password">Password</label>
             <input type="password" id="password" name="password"/>
         </form>    
     </div>    
