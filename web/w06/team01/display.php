@@ -16,7 +16,8 @@
                $verse = $sRow['verse'];
                $topics = $sRow['topics'];
 
-               echo "<p>The topics of $book $chapter:$verse are $topics.";
+               echo "<h1>$book $chapter:$verse</h1>";
+               echo "<p>Topics: $topics</p>";
             }
          ?>
 
