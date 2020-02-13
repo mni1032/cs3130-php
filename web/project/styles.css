@@ -7,7 +7,7 @@ h3, p {
     margin: 5px;
 }
 
-#header {
+#header, #menuBar {
     max-height: fit-content;
     padding-top: 2px;
     padding-bottom: 2px;

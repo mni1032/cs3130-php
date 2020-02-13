@@ -10,6 +10,7 @@
 <body>
     <?php
         include "header.php";
+        include "menuBar.php";
     ?>
     <div id="formHolder">
         <form action="commentary.php" method="POST">
