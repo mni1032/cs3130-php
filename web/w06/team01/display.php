@@ -6,23 +6,18 @@
 		<div class="container">
          <?php
             $lastInsert = $_GET['lastInsert'];
-            echo "<p>$lastInsert</p>";
-            // $statement = $db->prepare('SELECT * FROM w6_user WHERE id = :personId;');
-            // $statement->bindValue(':personId', $personId);
-            // $statement->execute();
-            // while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            //    $id = $row['id'];
-            //    $first = $row['first_name'];
-            //    $last = $row['last_name'];
-            //    $food_id = $row['food_type'];
 
-            //    $foodStatement = $db->prepare("SELECT food FROM w6_food WHERE id = $food_id;");
-            //    $foodStatement->execute();
-            //    while ($fRow = $foodStatement->fetch(PDO::FETCH_ASSOC)) {
-            //       $food = $fRow['food'];
-            //    }
-            //    echo "<h1>$first $last's favorite food is $food.</h1>";
-            // }
+            $statement = $db->prepare("SELECT s.id, s.book, s.chapter, s.verse, string_agg(t.name, ', ') AS topics FROM Scriptures s INNER JOIN scripture_topic st ON s.id = st.scripture_id INNER JOIN topic t ON st.topic_id = t.id GROUP BY s.id;");
+            $statement->execute();
+            while ($sRow = $statement->fetch(PDO::FETCH_ASSOC)) {
+               $id = $sRow['id'];
+               $book = $sRow['book'];
+               $chapter = $sRow['chapter'];
+               $verse = $sRow['verse'];
+               $topics = $sRow['topics'];
+
+               echo "<p>The topics of $book $chapter:$verse are $topics.";
+            }
          ?>
 
 		</div>

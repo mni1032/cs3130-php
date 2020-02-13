@@ -27,3 +27,5 @@ INSERT INTO topic (name)
 VALUES ('sacrifice');
 INSERT INTO topic (name)
 VALUES ('charity');
+
+SELECT s.id, s.book, s.chapter, s.verse, string_agg(t.name, ', ') AS topics FROM Scriptures s INNER JOIN scripture_topic st ON s.id = st.scripture_id INNER JOIN topic t ON st.topic_id = t.id GROUP BY s.id;
