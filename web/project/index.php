@@ -12,7 +12,7 @@
         include "header.php";
         include "menuBar.php";
     ?>
-    <div id="formHolder">
+    <div class="formHolder">
         <form action="commentary.php" method="POST">
             <label for="book">Book</label>
             <select id="book" name="book">

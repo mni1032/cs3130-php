@@ -32,9 +32,10 @@ a {
     padding-bottom: 2px;
     margin-bottom: 20px;
     background-color: cadetblue;
+    text-align: center;
 }
 
-#formHolder {
+.formHolder {
     max-height: fit-content;
     max-width: fit-content;
     padding: 10px;
