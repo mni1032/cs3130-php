@@ -37,7 +37,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: display.php/?lastInsert=$topicId");
+header("Location: display.php");
 
 die(); 
 ?>
