@@ -5,8 +5,6 @@
 	<body>
 		<div class="container">
          <?php
-            $lastInsert = $_GET['lastInsert'];
-
             $statement = $db->prepare("SELECT s.id, s.book, s.chapter, s.verse, string_agg(t.name, ', ') AS topics FROM Scriptures s INNER JOIN scripture_topic st ON s.id = st.scripture_id INNER JOIN topic t ON st.topic_id = t.id GROUP BY s.id;");
             $statement->execute();
             while ($sRow = $statement->fetch(PDO::FETCH_ASSOC)) {
