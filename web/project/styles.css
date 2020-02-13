@@ -7,11 +7,16 @@ h3, p {
     margin: 5px;
 }
 
+a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
 #header {
     max-height: fit-content;
     padding-top: 2px;
     padding-bottom: 2px;
-    margin-bottom: 20px;
     background-color: cadetblue;
     color: white;
     text-align: center;
