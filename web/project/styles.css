@@ -8,9 +8,9 @@ h3, p {
 }
 
 a {
-    background-color: white;
     text-decoration: none;
-    color: black;
+    color: white;
+    border: 1px solid white;
     border-radius: 5px;
     padding: 2px;
     margin: 3px;
