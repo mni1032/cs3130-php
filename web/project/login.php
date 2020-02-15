@@ -21,7 +21,4 @@
         </form>    
     </div>    
 </body>
-</html>    
-<?php
-
-?>
+</html>
