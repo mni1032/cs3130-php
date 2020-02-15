@@ -13,10 +13,12 @@
 <body>
     <?php
         include "header.php";
-        include "menuBar.php";
         if (isset($_SESSION['name'])) {
             $name = $_SESSION['name'];
-            echo "<p>$name</p>";
+            echo "<div id='menuBar'><a href='logout.php>Log out</a></div>";
+        }
+        else {
+            echo "<div id='menuBar'><a href='login.php'>Log in</a></div>";
         }
     ?>
     <div class="formHolder">
