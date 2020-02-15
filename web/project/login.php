@@ -18,6 +18,7 @@
             <input type="text" id="username" name="username"/><br/>
             <label for="password">Password</label>
             <input type="password" id="password" name="password"/>
+            <input type="submit" name="login" value="Log in"/>
         </form>    
     </div>    
 </body>
