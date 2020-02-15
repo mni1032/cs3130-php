@@ -22,6 +22,6 @@
         die();
     }
 
-    header("Location: index.php/?success=$match");
+    header("Location: index.php");
     die(); 
 ?>
