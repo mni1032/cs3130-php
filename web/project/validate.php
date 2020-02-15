@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $username  = $_POST['username'];
     $password = $_POST['password'];
 
@@ -6,14 +7,17 @@
     $db = get_db();
 
     try {
-        $query = 'SELECT COUNT(*) AS match FROM member WHERE username = :username AND password = :password;';
+        $query = 'SELECT first_name, last_name FROM member WHERE username = :username AND password = :password;';
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
         $statement->execute();
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            $match = $row['match'];
+            $first = $row['first_name'];
+            $last = $row['last_name'];
+            $name = $first . ' ' . $last;
+            $_SESSION['name'] = $name;
         }
     }
     catch (Exception $ex)

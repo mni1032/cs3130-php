@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +14,10 @@
     <?php
         include "header.php";
         include "menuBar.php";
+        if (isset($_SESSION['name'])) {
+            $name = $_SESSION['name'];
+            echo "<p>$name</p>";
+        }
     ?>
     <div class="formHolder">
         <form action="commentary.php" method="POST">
