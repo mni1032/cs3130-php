@@ -15,8 +15,7 @@
         include "header.php";
         if (isset($_SESSION['name'])) {
             $name = $_SESSION['name'];
-            echo "$name";
-            //echo "<div id='menuBar'><a href='logout.php>Log out</a></div>";
+            echo "<div id='menuBar'><a href='logout.php'>Log out</a></div>";
         }
         else {
             echo "<div id='menuBar'><a href='login.php'>Log in</a></div>";
