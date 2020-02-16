@@ -1,7 +1,7 @@
 <?php
     $book = $_POST['book'];
-    $chapter = $_POST['chapter'];
-    $verse = $_POST['verse'];
+    $chapter = intval($_POST['chapter']);
+    $verse = intval($_POST['verse']);
     $text = $_POST['text'];
 
     var_dump($book);
