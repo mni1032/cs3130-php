@@ -36,17 +36,17 @@
         $statement->bindValue(':citation', $citation);
         $statement->execute();
 
-        $citationId = $db->lastInsert("citation_id_seq");
+        $citationId = $db->lastInsertId("citation_id_seq");
 
-        // $query = 'INSERT INTO comment (author_id, create_date, verse_id, citation_id, text) VALUES (:author_id, NOW(), :verse_id, :citation_id, :text);';
-        // $statement = $db->prepare($query);
-        // $statement->bindValue(':author_id', $authorId);
-        // $statement->bindValue(':verse_id', $verseId);
-        // $statement->bindValue(':citation_id', $citationId);
-        // $statement->bindValue(':text', $comment);
-        // $statement->execute();
+        $query = 'INSERT INTO comment (author_id, create_date, verse_id, citation_id, text) VALUES (:author_id, NOW(), :verse_id, :citation_id, :text);';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':author_id', $authorId);
+        $statement->bindValue(':verse_id', $verseId);
+        $statement->bindValue(':citation_id', $citationId);
+        $statement->bindValue(':text', $comment);
+        $statement->execute();
 
-        // $lastComment= $db->lastInsertId("comment_id_seq");
+        $lastComment= $db->lastInsertId("comment_id_seq");
     }
     catch (Exception $ex)
     {
