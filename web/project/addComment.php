@@ -44,6 +44,7 @@
             <br/>
             <label for="citation">Source</label>
             <input type="text" id="citation" name="citation"/> 
+            <br/>
             <label for="comment">Comment</label>
             <textarea id="comment" name="comment" rows="15" cols="80"></textarea>
             </br>
