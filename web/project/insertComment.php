@@ -7,20 +7,21 @@
     $citation = $_POST['citation'];
     $comment = $_POST['comment'];
 
-    // require("dbConnect.php");
-    // $db = get_db();
+    require("dbConnect.php");
+    $db = get_db();
 
-    // try {
-    //     $query = 'SELECT id FROM verse WHERE book = :book AND chapter = :chapter AND verse = :verse;';
-    //     $statement = $db->prepare($query);
-    //     $statement->bindValue(':book', $book);
-    //     $statement->bindValue(':chapter', $chapter);
-    //     $statement->bindValue(':verse', $verse);
-    //     $statement->execute();
+    try {
+        $query = 'SELECT id FROM verse WHERE book = :book AND chapter = :chapter AND verse = :verse;';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':book', $book);
+        $statement->bindValue(':chapter', $chapter);
+        $statement->bindValue(':verse', $verse);
+        $statement->execute();
 
-    //     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    //         $verseId = $row['id'];
-    //     }
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $verseId = $row['id'];
+            echo "$verseId";
+        }
 
     //     $query = 'SELECT id FROM member WHERE username = :username;';
     //     $statement = $db->prepare($query);
@@ -48,12 +49,12 @@
     //     $statement->execute();
 
     //     $lastComment= $db->lastInsertId("comment_id_seq");
-    // }
-    // catch (Exception $ex)
-    // {
-    //     echo "Error with DB. Details: $ex";
-    //     die();
-    // }
+    }
+    catch (Exception $ex)
+    {
+        echo "Error with DB. Details: $ex";
+        die();
+    }
 
     // header("Location: addComment.php?lastVerse=$lastComment");
     // die(); 
