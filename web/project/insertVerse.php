@@ -14,6 +14,7 @@
         $statement->bindValue(':chapter', $chapter);
         $statement->bindValue(':verse', $verse);
         $statement->bindValue(':text', $text);
+        $statement->execute();
 
         $lastVerse = $db->lastInsertId("verse_id_seq");
     }
