@@ -45,8 +45,6 @@
         $statement->bindValue(':citation_id', $citationId);
         $statement->bindValue(':text', $comment);
         $statement->execute();
-
-        $lastComment= $db->lastInsertId("comment_id_seq");
     }
     catch (Exception $ex)
     {
@@ -54,6 +52,6 @@
         die();
     }
 
-    header("Location: addComment.php?lastVerse=$lastComment");
+    header("Location: addComment.php");
     die(); 
 ?>
