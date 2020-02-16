@@ -36,7 +36,7 @@
         $statement->bindValue(':citation', $citation);
         $statement->execute();
 
-        // $citationId = $db->lastInsert("citation_id_seq");
+        $citationId = $db->lastInsert("citation_id_seq");
 
         // $query = 'INSERT INTO comment (author_id, create_date, verse_id, citation_id, text) VALUES (:author_id, NOW(), :verse_id, :citation_id, :text);';
         // $statement = $db->prepare($query);
