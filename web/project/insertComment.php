@@ -28,7 +28,7 @@
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             $authorId = $row['id'];
-            echo "$authorId";
+            echo "$username";
         }
         
     //     $query = 'INSERT INTO citation (citation) VALUES (:citation);';
