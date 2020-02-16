@@ -54,6 +54,6 @@
         die();
     }
 
-    // header("Location: addComment.php?lastVerse=$lastComment");
-    // die(); 
+    header("Location: addComment.php?lastVerse=$lastComment");
+    die(); 
 ?>
