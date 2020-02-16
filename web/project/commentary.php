@@ -20,7 +20,7 @@
             require "dbConnect.php";
             $db = get_db();
 
-            $verse_text = $db->prepare("SELECT id,text FROM verse WHERE book='$book' AND chapter=$chapter AND verse=$verse");
+            $verse_text = $db->prepare("SELECT id, text FROM verse WHERE book='$book' AND chapter=$chapter AND verse=$verse");
             $verse_text->execute();
 
             while ($vRow = $verse_text->fetch(PDO::FETCH_ASSOC)) {
