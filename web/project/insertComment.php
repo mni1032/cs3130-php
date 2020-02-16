@@ -25,29 +25,30 @@
         $query = 'SELECT id FROM member WHERE username = :username;';
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
-        echo "$username";
+        $statement->execute();
+        
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             $authorId = $row['id'];
         }
         
-    //     $query = 'INSERT INTO citation (citation) VALUES (:citation);';
-    //     $statement = $db->prepare($query);
-    //     $statement->bindValue(':citation', $citation);
-    //     $statement->execute();
+        $query = 'INSERT INTO citation (citation) VALUES (:citation);';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':citation', $citation);
+        $statement->execute();
 
-    //     $citationId = $db->lastInsert("citation_id_seq");
+        $citationId = $db->lastInsert("citation_id_seq");
 
-    //     $date = date("Y/m/d");
-    //     $query = 'INSERT INTO comment (author_id, create_date, verse_id, citation_id, text) VALUES (:author_id, :create_date, :verse_id, :citation_id, :text);';
-    //     $statement = $db->prepare($query);
-    //     $statement->bindValue(':author_id', $authorId);
-    //     $statement->bindValue(':create_date', $date);
-    //     $statement->bindValue(':verse_id', $verseId);
-    //     $statement->bindValue(':citation_id', $citationId);
-    //     $statement->bindValue(':text', $comment);
-    //     $statement->execute();
+        $date = date("Y/m/d");
+        $query = 'INSERT INTO comment (author_id, create_date, verse_id, citation_id, text) VALUES (:author_id, :create_date, :verse_id, :citation_id, :text);';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':author_id', $authorId);
+        $statement->bindValue(':create_date', $date);
+        $statement->bindValue(':verse_id', $verseId);
+        $statement->bindValue(':citation_id', $citationId);
+        $statement->bindValue(':text', $comment);
+        $statement->execute();
 
-    //     $lastComment= $db->lastInsertId("comment_id_seq");
+        $lastComment= $db->lastInsertId("comment_id_seq");
     }
     catch (Exception $ex)
     {
