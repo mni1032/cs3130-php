@@ -1,30 +1,24 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <title>School of the Prophets</title>
 </head>
 
 <body>
     <?php
         include "header.php";
-        if (isset($_SESSION['first_name'])) {
-            echo "<div id='menuBar'><a href='logout.php'>Log out</a>";
-            echo "<a href='addVerse.php'>Add verse</a>";
-            echo "<a href='addComment.php'>Add commentary</a></div>";
-        }
-        else {
-            echo "<div id='menuBar'><a href='login.php'>Log in</a></div>";
-        }
-    ?>
+        echo "<div id='menuBar'><a href='logout.php'>Log out</a>";
+        echo "<a href='addVerse.php'>Add verse</a>";
+        echo "<a href='addComment.php'>Add commentary</a></div>"; 
+    ?>      
     <div class="formHolder">
-        <form action="commentary.php" method="POST">
-            <label for="book">Book</label>
+        <form action="insertComment.php" method="POST">
+        <label for="book">Book</label>
             <select id="book" name="book">
                 <option value="" selected disabled>--select book--</option>
                 <option value="1 Nephi">1 Nephi</option>
@@ -48,8 +42,13 @@
                 <option value="3">3</option>
             </select>
             <br/>
-            <input id="submit" name="submit" type="submit" value="Get commentary"/>
+            <label for="citation">Source</label>
+            <input type="text" id="citation" name="citation"/> 
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" rows="15" cols="80"></textarea>
+            </br>
+            <input type="submit" id="submit" name="addComment" value="Add comment"/>
         </form>
-    </div>
+    </div>    
 </body>
 </html>

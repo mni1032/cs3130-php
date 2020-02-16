@@ -16,8 +16,9 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             $first = $row['first_name'];
             $last = $row['last_name'];
-            $name = $first . ' ' . $last;
-            $_SESSION['name'] = $name;
+            $_SESSION['first_name'] = $first;
+            $_SESSION['last_name'] = $last;
+            $_SESSION['username'] = $username;
         }
     }
     catch (Exception $ex)
