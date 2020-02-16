@@ -25,7 +25,7 @@
             <label for="verse">Verse</label>
             <input type="number" id="verse" name="verse"/></br>
             <label for="text">Text</label>
-            <textarea id="text" name="text" rows="15" columns="80"></textarea></br>
+            <textarea id="text" name="text" rows="15" cols="80"></textarea></br>
             <input type="submit" name="addVerse" value="Add verse"/>
         </form>
     </div>    
