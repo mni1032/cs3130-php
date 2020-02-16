@@ -25,10 +25,9 @@
         $query = 'SELECT id FROM member WHERE username = :username;';
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
-
+        echo "$username";
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             $authorId = $row['id'];
-            echo "$username";
         }
         
     //     $query = 'INSERT INTO citation (citation) VALUES (:citation);';
