@@ -31,10 +31,10 @@
             $authorId = $row['id'];
         }
         
-        // $query = 'INSERT INTO citation (citation) VALUES (:citation);';
-        // $statement = $db->prepare($query);
-        // $statement->bindValue(':citation', $citation);
-        // $statement->execute();
+        $query = 'INSERT INTO citation (citation) VALUES (:citation);';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':citation', $citation);
+        $statement->execute();
 
         // $citationId = $db->lastInsert("citation_id_seq");
 
