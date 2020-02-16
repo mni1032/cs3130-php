@@ -20,16 +20,16 @@
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             $verseId = $row['id'];
-            echo "$verseId";
         }
 
-    //     $query = 'SELECT id FROM member WHERE username = :username;';
-    //     $statement = $db->prepare($query);
-    //     $statement->bindValue(':username', $username);
+        $query = 'SELECT id FROM member WHERE username = :username;';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':username', $username);
 
-    //     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    //         $authorId = $row['id'];
-    //     }
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $authorId = $row['id'];
+            echo "$authorId";
+        }
         
     //     $query = 'INSERT INTO citation (citation) VALUES (:citation);';
     //     $statement = $db->prepare($query);
