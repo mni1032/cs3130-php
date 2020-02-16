@@ -15,7 +15,7 @@
         $statement->bindValue(':verse', $verse);
         $statement->bindValue(':text', $text);
 
-        
+        $lastVerse = $db->lastInsertId("verse_id_seq");
     }
     catch (Exception $ex)
     {
@@ -23,6 +23,6 @@
         die();
     }
 
-    header("Location: addVerse.php");
+    header("Location: addVerse.php?lastVerse=$lastVerse");
     die(); 
 ?>
