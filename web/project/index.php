@@ -50,7 +50,7 @@
                     }
                 }
             });
-            $( "#verse" ).change(function() {
+            $( "#chapter" ).change(function() {
                 fillVerses();
             });
         }
