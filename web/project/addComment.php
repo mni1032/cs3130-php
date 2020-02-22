@@ -1,7 +1,7 @@
 <?php
     if (!isset($_SESSION['first_name'])) {
         header("Location: index.php");
-        die();
+        exit;
     }
 ?>
 <!DOCTYPE html>
