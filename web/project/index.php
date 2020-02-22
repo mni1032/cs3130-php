@@ -1,6 +1,7 @@
 <?php
     session_start();
     require("dbConnect.php");
+    $db = get_db();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,21 +23,13 @@
         else {
             echo "<div id='menuBar'><a href='login.php'>Log in</a></div>";
         }
-
-        $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
-        $book_query->execute();
-        
-        while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
-            $book = $bRow['book'];
-            echo "<p>$book</p>";
-    }
     ?>
     <div class="formHolder">
         <form action="commentary.php" method="POST">
             <label for="book">Book</label>
             <select id="book" name="book">
                 <option value="" selected disabled>--select book--</option>
-                <!-- <?php
+                <?php
                     $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
                     $book_query->execute();
         
@@ -45,7 +38,7 @@
         
                         echo "<option value='$book'>$book</option>";
                     }
-                ?> -->
+                ?>
             </select>
             <br/>
             <label for="chapter">Chapter</label>
