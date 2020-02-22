@@ -23,11 +23,10 @@
                 dataType: 'json',
                 success: function(response){
                     var len = response.length;
-                    
                     for( var i = 0; i<len; i++){
                         var chapter = response[i]['chapter'];
                     
-                        $("#chapter").append("<option value='"+chapter+"'>"+chapter+"</option>");
+                        $("#chapter").append("<option value='"+1+"'>"+1+"</option>");
 
                 }
                 }
