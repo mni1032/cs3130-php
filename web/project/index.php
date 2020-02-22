@@ -12,6 +12,28 @@
     <title>School of the Prophets</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        function fillVerses() {
+            var bookSelect = document.getElementById("book");
+            var selectedBook = bookSelect.options[bookSelect.selectedIndex].value;
+            var chapterSelect = document.getElementById("chapter");
+            var selectedChapter = chapterSelect.options[chapterSelect.selectedIndex].value;
+            $('#verse').removeAttr("disabled");
+            $.ajax({
+                type: "POST",
+                url: "getChapters.php",
+                data: { 'book': selectedBook  },
+                dataType: 'json',
+                success: function(response){
+                    var len = response.length;
+                    for( var i = 0; i<len; i++){
+                        var chapter = response[i];
+                        $("#chapter").append("<option value='"+chapter+"'>"+chapter+"</option>");
+
+                }
+                }
+            });
+        }
+
         function fillChapters() {
             var bookSelect = document.getElementById("book");
             var selectedBook = bookSelect.options[bookSelect.selectedIndex].value;
@@ -51,16 +73,6 @@
             <label for="book">Book</label>
             <select id="book" name="book" onchange="fillChapters()">
                 <option value="" selected disabled>--select book--</option>
-                <?php
-                    $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
-                    $book_query->execute();
-        
-                    while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
-                        $book = $bRow['book'];
-        
-                        echo "<option value='$book'>$book</option>";
-                    }
-                ?>
             </select>
             <br/>
             <label for="chapter">Chapter</label>
@@ -71,9 +83,6 @@
             <label for="verse">Verse</label>
             <select id="verse" name="verse" disabled>
                 <option value="" selected disabled>--select verse--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
             </select>
             <br/>
             <input id="submit" name="submit" type="submit" value="Get commentary"/>
