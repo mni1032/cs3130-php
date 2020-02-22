@@ -31,11 +31,17 @@
                 echo "<h3>Commentary on $book $chapter:$verse</h3>";
                 $comments = $db->prepare("SELECT text FROM comment WHERE verse_id = $verse_id");
                 $comments->execute();
+
+                $numComments = 0;
+
                 while ($cRow = $comments->fetch(PDO::FETCH_ASSOC)) {
                     $comment = $cRow['text'];
                     echo "<p class='comment'>$comment</p>";
+                    $numComments++;
                 }
-                
+                if ($numComments == 0) {
+                    echo "<p class='comment>There is no commentary for this verse.</p>";
+                }
             }
         }
     ?>
