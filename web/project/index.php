@@ -20,7 +20,7 @@
                 type: "POST",
                 url: "getChapters.php",
                 data: { 'book': selectedBook  },
-                dataType: 'json',,
+                dataType: 'json',
                 success: function(response){
                     var len = response.length;
                     
@@ -32,7 +32,7 @@
                 }
                 }
             });
-    }
+        }
     </script>
 </head>
 
