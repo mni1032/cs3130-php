@@ -20,16 +20,15 @@
             $('#verse').removeAttr("disabled");
             $.ajax({
                 type: "POST",
-                url: "getChapters.php",
-                data: { 'book': selectedBook  },
+                url: "getVerses.php",
+                data: { 'book': selectedBook, 'chapter': selectedChapter },
                 dataType: 'json',
                 success: function(response){
                     var len = response.length;
                     for( var i = 0; i<len; i++){
-                        var chapter = response[i];
-                        $("#chapter").append("<option value='"+chapter+"'>"+chapter+"</option>");
-
-                }
+                        var verse = response[i];
+                        $("#verse").append("<option value='"+verse+"'>"+verse+"</option>");
+                    }
                 }
             });
         }
@@ -48,9 +47,11 @@
                     for( var i = 0; i<len; i++){
                         var chapter = response[i];
                         $("#chapter").append("<option value='"+chapter+"'>"+chapter+"</option>");
-
+                    }
                 }
-                }
+            });
+            $( "#verse" ).change(function() {
+                fillVerses();
             });
         }
     </script>
@@ -73,6 +74,16 @@
             <label for="book">Book</label>
             <select id="book" name="book" onchange="fillChapters()">
                 <option value="" selected disabled>--select book--</option>
+                <?php
+                    $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
+                    $book_query->execute();
+        
+                    while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
+                        $book = $bRow['book'];
+        
+                        echo "<option value='$book'>$book</option>";
+                    }
+                ?>
             </select>
             <br/>
             <label for="chapter">Chapter</label>
