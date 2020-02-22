@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require("dbConnect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +28,16 @@
             <label for="book">Book</label>
             <select id="book" name="book">
                 <option value="" selected disabled>--select book--</option>
-                <option value="1 Nephi">1 Nephi</option>
-                <option value="2 Nephi">2 Nephi</option>
-                <option value="Jacob">Jacob</option>
+                <?php
+                    $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
+                    $book_query->execute();
+        
+                    while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
+                        $book = $bRow['book'];
+        
+                        echo "<option value='$book'>$book</option>";
+                    }
+                ?>
             </select>
             <br/>
             <label for="chapter">Chapter</label>
