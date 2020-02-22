@@ -41,7 +41,7 @@
                 }
 
                 if ($numComments === 0) {
-                    echo "<p class='comment>There is no commentary for this verse.</p>";
+                    echo "<p class='comment'>There is no commentary for this verse.</p>";
                 }
             }
         }
