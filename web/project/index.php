@@ -51,7 +51,7 @@
     <div class="formHolder">
         <form action="commentary.php" method="POST">
             <label for="book">Book</label>
-            <select id="book" name="book" onchange="fillChapters()>
+            <select id="book" name="book">
                 <option value="" selected disabled>--select book--</option>
                 <?php
                     $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
@@ -66,7 +66,7 @@
             </select>
             <br/>
             <label for="chapter">Chapter</label>
-            <select id="chapter" name="chapter" disabled">
+            <select id="chapter" name="chapter" disabled onchange="fillChapters()">
                 <option value="" selected disabled>--select chapter--</option>
             </select>
             <br/>
