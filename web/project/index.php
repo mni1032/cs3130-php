@@ -1,14 +1,6 @@
 <?php
     session_start();
     require("dbConnect.php");
-
-    $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
-    $book_query->execute();
-        
-    while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
-        $book = $bRow['book'];
-        echo "<p>$book</p>";
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +22,14 @@
         else {
             echo "<div id='menuBar'><a href='login.php'>Log in</a></div>";
         }
+
+        $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
+        $book_query->execute();
+        
+        while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
+            $book = $bRow['book'];
+            echo "<p>$book</p>";
+    }
     ?>
     <div class="formHolder">
         <form action="commentary.php" method="POST">
