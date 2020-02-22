@@ -12,7 +12,7 @@
 
     while ($row = $chapters->fetch(PDO::FETCH_ASSOC)) {
         $chapter = $row['chapter'];
-        $chapters_arr[] = array("chapter"->$chapter);
+        $chapters_arr[] = $chapter;
     }
 
     echo json_encode($chapters_arr);
