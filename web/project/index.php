@@ -25,8 +25,8 @@
                     var len = response.length;
                     for( var i = 0; i<len; i++){
                         var chapter = response[i]['chapter'];
-                    
-                        $("#chapter").append("<option value='"+1+"'>"+1+"</option>");
+                        $("body").append(response);
+                        $("#chapter").append("<option value='"+chapter+"'>"+chapter+"</option>");
 
                 }
                 }
