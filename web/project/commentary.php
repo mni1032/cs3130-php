@@ -39,8 +39,8 @@
                     echo "<p class='comment'>$comment</p>";
                     $numComments++;
                 }
-                echo "$numComments";
-                if ($numComments == 0) {
+
+                if ($numComments === 0) {
                     echo "<p class='comment>There is no commentary for this verse.</p>";
                 }
             }
