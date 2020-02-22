@@ -10,6 +10,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>School of the Prophets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function fillChapters() {
+            var bookSelect = document.getElementById("book");
+            var selectedBook = bookSelect.options[bookSelect.selectedIndex].value;
+            $('#chapter').prop('disabled', false);
+            $.ajax({
+                type: "POST",
+                url: "getChapters.php",
+                data: { 'book': selectedBook  },
+                dataType: 'json',,
+                success: function(response){
+                    var len = response.length;
+                    
+                    for( var i = 0; i<len; i++){
+                        var chapter = response[i]['chapter'];
+                    
+                        $("#chapter").append("<option value='"+chapter+"'>"+chapter+"</option>");
+
+                }
+                }
+            });
+    }
+    </script>
 </head>
 
 <body>
@@ -42,15 +66,12 @@
             </select>
             <br/>
             <label for="chapter">Chapter</label>
-            <select id="chapter" name="chapter">
+            <select id="chapter" name="chapter" disabled onchange="fillChapters()">
                 <option value="" selected disabled>--select chapter--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
             </select>
             <br/>
             <label for="verse">Verse</label>
-            <select id="verse" name="verse">
+            <select id="verse" name="verse" disabled>
                 <option value="" selected disabled>--select verse--</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
