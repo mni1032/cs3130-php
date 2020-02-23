@@ -1,5 +1,5 @@
 <?php
-    if (!isset($_POST['submit'])) {
+    if (!isset($_POST['addComment'])) {
         header("Location: addComment.php");
         exit();
     }

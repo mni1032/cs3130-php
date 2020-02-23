@@ -27,8 +27,7 @@
     <div class="formHolder">
         <?php
             if (isset($_SESSION['exists'])) {
-                echo "Failed";
-                //echo "<p id='warning'>The verse you tried to insert is already in the database.</p>";
+                echo "<p id='warning'>The verse you tried to insert is already in the database.</p>";
             } 
             unset($_SESSION['exists']);
         ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!isset($_POST['submit'])) {
+    if (!isset($_POST['addVerse'])) {
         header("Location: addVerse.php");
         exit();
     }
@@ -25,7 +25,6 @@
             $verseId = $db->lastInsertId("verse_id_seq");
         }
         catch (Exception $ex) {
-            echo "Didn't insert.";
             $_SESSION['exists'] = true;
         }
     }
@@ -34,6 +33,6 @@
         die();
     }
 
-    // header("Location: addVerse.php");
-    // die(); 
+    header("Location: addVerse.php");
+    die(); 
 ?>
