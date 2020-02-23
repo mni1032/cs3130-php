@@ -31,6 +31,9 @@
                     }
                 }
             });
+            $( "#verse" ).change(function() {
+                $('#submit').removeAttr("disabled");
+            });
         }
 
         function fillChapters() {
@@ -96,7 +99,7 @@
                 <option value="" selected disabled>--select verse--</option>
             </select>
             <br/>
-            <input id="submit" name="submit" type="submit" value="Get commentary"/>
+            <input id="submit" name="submit" type="submit" value="Get commentary" disabled/>
         </form>
     </div>
 </body>
