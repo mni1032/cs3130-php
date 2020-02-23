@@ -20,6 +20,7 @@
     <?php
         include "header.php";
         echo "<div id='menuBar'><a href='logout.php'>Log out</a>";
+        echo "<a href='index.php'>Home</a>";
         echo "<a href='addVerse.php'>Add verse</a>";
         echo "<a href='addComment.php'>Add commentary</a></div>"; 
     ?>      
