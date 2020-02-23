@@ -26,10 +26,10 @@
     ?>      
     <div class="formHolder">
         <?php
-            if (isset($_POST['exists'])) {
+            if (isset($_SESSION['exists'])) {
                 echo "<p id='warning'>The verse you tried to insert is already in the database.</p>";
             } 
-            unset($_POST['exists']);
+            unset($_SESSION['exists']);
         ?>
         <form action="insertVerse.php" method="POST">
             <label for="book">Book</label>

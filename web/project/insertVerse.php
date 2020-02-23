@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if (!isset($_POST['submit'])) {
         header("Location: addVerse.php");
         exit();
@@ -24,7 +25,7 @@
             $verseId = $db->lastInsertId("verse_id_seq");
         }
         catch (Exception $ex) {
-            $_POST['exists'] = true;
+            $_SESSION['exists'] = true;
         }
     }
     catch (Exception $ex) {
