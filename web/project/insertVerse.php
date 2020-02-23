@@ -20,17 +20,9 @@
         $statement->bindValue(':verse', $verse);
         $statement->bindValue(':text', $text);
         $statement->execute();
-
-        try {
-            $verseId = $db->lastInsertId("verse_id_seq");
-        }
-        catch (Exception $ex) {
-            $_SESSION['exists'] = true;
-        }
     }
     catch (Exception $ex) {
-        echo "Error with DB. Details: $ex";
-        die();
+        $_SESSION['exists'] = true;
     }
 
     header("Location: addVerse.php");
