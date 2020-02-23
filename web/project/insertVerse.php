@@ -25,6 +25,7 @@
             $verseId = $db->lastInsertId("verse_id_seq");
         }
         catch (Exception $ex) {
+            echo "Didn't insert.";
             $_SESSION['exists'] = true;
         }
     }
@@ -33,6 +34,6 @@
         die();
     }
 
-    header("Location: addVerse.php");
-    die(); 
+    // header("Location: addVerse.php");
+    // die(); 
 ?>
