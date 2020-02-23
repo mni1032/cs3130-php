@@ -48,8 +48,8 @@
                 <option value="" selected disabled>--select chapter--</option>
             </select>
             <br/>
-            <label for="verse">Verse</label disabled>
-            <select id="verse" name="verse">
+            <label for="verse">Verse</label>
+            <select id="verse" name="verse" disabled>
                 <option value="" selected disabled>--select verse--</option>
             </select>
             <br/>
