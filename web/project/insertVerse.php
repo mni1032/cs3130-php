@@ -19,9 +19,15 @@
         $statement->bindValue(':verse', $verse);
         $statement->bindValue(':text', $text);
         $statement->execute();
+
+        try {
+            $verseId = $db->lastInsertId("verse_id_seq");
+        }
+        catch (Exception $ex) {
+            $_POST['exists'] = true;
+        }
     }
-    catch (Exception $ex)
-    {
+    catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
         die();
     }

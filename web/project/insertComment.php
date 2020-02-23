@@ -51,8 +51,7 @@
         $statement->bindValue(':text', $comment);
         $statement->execute();
     }
-    catch (Exception $ex)
-    {
+    catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
         die();
     }
