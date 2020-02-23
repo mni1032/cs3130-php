@@ -55,7 +55,7 @@
                     $citation_id = $cRow['citation_id'];
                     $comment = $cRow['text'];
 
-                    echo "<p class='comment'>$comment</p>";
+                    echo "<div class='comment'><p>$comment</p>";
                     $numComments++;
 
                     $source = $db->prepare("SELECT citation FROM citation WHERE id = $citation_id");
@@ -71,12 +71,12 @@
 
                     while ($aRow = $author->fetch(PDO::FETCH_ASSOC)) {
                         $authorName = $aRow['username'];
-                        echo "<p class='author'>Posted by $authorName</p>";
+                        echo "<p class='author'>Posted by $authorName</p></div>";
                     }
                 }
 
                 if ($numComments === 0) {
-                    echo "<p class='comment'>There is no commentary for this verse.</p>";
+                    echo "<div class='comment'><p>There is no commentary for this verse.</p></div>";
                 }
             }
         }
