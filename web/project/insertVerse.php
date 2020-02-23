@@ -1,4 +1,8 @@
 <?php
+    if (!isset($_POST['submit'])) {
+        header("Location: addVerse.php");
+        exit();
+    }
     $book = $_POST['book'];
     $chapter = intval($_POST['chapter']);
     $verse = intval($_POST['verse']);

@@ -1,4 +1,9 @@
 <?php
+    if (!isset($_POST['submit'])) {
+        header("Location: addVerse.php");
+        exit();
+    }
+    
     session_start();
     $username = $_SESSION['username'];
     $book = $_POST['book'];
