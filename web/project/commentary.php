@@ -1,4 +1,8 @@
 <?php
+    if (!isset($_POST['submit'])) {
+        header("Location: index.php");
+        exit();
+    }
     session_start();
 ?>
 <!DOCTYPE html>

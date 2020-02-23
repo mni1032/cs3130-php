@@ -4,6 +4,8 @@
         header("Location: index.php");
         exit();
     }
+    require("dbConnect.php");
+    $db = get_db();
 ?>
 <!DOCTYPE html>
 
@@ -27,27 +29,28 @@
     <div class="formHolder">
         <form action="insertComment.php" method="POST">
         <label for="book">Book</label>
-            <select id="book" name="book">
+            <select id="book" name="book" onchange="fillChapters()">
                 <option value="" selected disabled>--select book--</option>
-                <option value="1 Nephi">1 Nephi</option>
-                <option value="2 Nephi">2 Nephi</option>
-                <option value="Jacob">Jacob</option>
+                <?php
+                    $book_query = $db->prepare("SELECT DISTINCT book FROM verse;");
+                    $book_query->execute();
+        
+                    while ($bRow = $book_query->fetch(PDO::FETCH_ASSOC)) {
+                        $book = $bRow['book'];
+        
+                        echo "<option value='$book'>$book</option>";
+                    }
+                ?>
             </select>
             <br/>
             <label for="chapter">Chapter</label>
-            <select id="chapter" name="chapter">
+            <select id="chapter" name="chapter" disabled>
                 <option value="" selected disabled>--select chapter--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
             </select>
             <br/>
-            <label for="verse">Verse</label>
+            <label for="verse">Verse</label disabled>
             <select id="verse" name="verse">
                 <option value="" selected disabled>--select verse--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
             </select>
             <br/>
             <label for="citation">Source</label>

@@ -1,9 +1,9 @@
 <?php
     if (!isset($_POST['submit'])) {
-        header("Location: addVerse.php");
+        header("Location: addComment.php");
         exit();
     }
-    
+
     session_start();
     $username = $_SESSION['username'];
     $book = $_POST['book'];
