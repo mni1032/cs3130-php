@@ -45,15 +45,34 @@
 
                 echo "<p>$text</p>";
                 echo "<h3>Commentary on $book $chapter:$verse</h3>";
-                $comments = $db->prepare("SELECT text FROM comment WHERE verse_id = $verse_id");
+                $comments = $db->prepare("SELECT author_id, citation_id, text FROM comment WHERE verse_id = $verse_id");
                 $comments->execute();
 
                 $numComments = 0;
 
                 while ($cRow = $comments->fetch(PDO::FETCH_ASSOC)) {
+                    $author_id = $cRow['author_id'];
+                    $citation_id = $cRow['citation_id'];
                     $comment = $cRow['text'];
+
                     echo "<p class='comment'>$comment</p>";
                     $numComments++;
+
+                    $source = $db->prepare("SELECT citation FROM citation WHERE id = $citation_id");
+                    $source->execute();
+
+                    while ($sRow = $source->fetch(PDO::FETCH_ASSOC)) {
+                        $sourceName = $sRow['citation'];
+                        echo "<p class='source'>$sourceName</p>";
+                    }
+
+                    $author = $db->prepare("SELECT username FROM member WHERE id = $author_id");
+                    $author->execute();
+
+                    while ($aRow = $author->fetch(PDO::FETCH_ASSOC)) {
+                        $authorName = $aRow['username'];
+                        echo "<p class='author'>Posted by $authorName</p>";
+                    }
                 }
 
                 if ($numComments === 0) {

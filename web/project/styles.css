@@ -40,6 +40,10 @@ input {
     text-align: center;
 }
 
+#warning {
+    color: red;
+}
+
 .formHolder {
     max-height: fit-content;
     max-width: fit-content;
@@ -52,4 +56,14 @@ input {
     padding: 5px;
     margin: 5px;
     border: 1px solid cadetblue;
+}
+
+.author {
+    font-weight: bold;
+    font-size: small;
+}
+
+.source {
+    font-style: italic;
+    font-size: small;
 }
